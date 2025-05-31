@@ -1,21 +1,18 @@
-import Button from "./components/Forms/Button";
+import { Link } from "react-router";
 
 function App() {
     return (
-		<section className="w-2/5 mx-auto pt-36 h-full flex justify-center">
-			<div className="flex flex-col items-center gap-5">
-				<h1 className="text-5xl text-center font-bold">Método de Newton e Newton Modificado</h1>
-				<h4 className="text-xl text-center">Otimização não linear</h4>
-				<Button
-					type="submit"
-					className={{ button: "w-48 text-xl" }}
-					size="md"
-				>
-					Iniciar Otimização
-				</Button>
-			</div>
+		<>
+			<h1 className="text-5xl text-center font-bold">Método de Newton e Newton Modificado</h1>
+			<h4 className="text-xl text-center">Otimização não linear</h4>
+			<Link
+				to="/parametros"
+				className="flex justify-center w-68 text-2xl bg-gray-800 disabled:bg-zinc-300 cursor-pointer dark:disabled:bg-zinc-600 border-0 focus:bottom-0 hover:border-0 hover:opacity-95 focus:outline-none text-white font-semibold rounded transition-transform transform active:scale-95"
+			>
+				<div>Iniciar Otimização</div>
+			</Link>
 			
-		</section>
+		</>
 	);
 }
 
